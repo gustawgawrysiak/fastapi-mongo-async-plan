@@ -36,13 +36,13 @@ async def get_course_details(course_name: str, db: DatabaseManager = Depends(get
     return course
 
 
-@router.put('/room/', response_description="Add new course", responses=put_responses(model=Course))
+@router.put('/course/', response_description="Add new course", responses=put_responses(model=Course))
 async def create_course(payload: Course, db: DatabaseManager = Depends(get_db)):
     course_created = await db.course_insert_one(course=payload)
     return JSONResponse(status_code=status.HTTP_201_CREATED, content=course_created)
 
 
-@router.patch('/room/', response_description="", responses=patch_responses(model=Course))
+@router.patch('/course/', response_description="", responses=patch_responses(model=Course))
 async def patch_course(payload: Course, db: DatabaseManager = Depends(get_db)):
     course_updated = await db.patch_course(course=payload)
     return course_updated
