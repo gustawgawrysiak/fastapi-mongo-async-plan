@@ -11,10 +11,11 @@ from app.db import db
 """
     TODO:
         1. Lessons for each course grouped by days
-        2. Settings from class obj
-        3. Custom logging for specific ENV
-        4. Basic front plan display
-        5. Admin
+        2. Routes for lecturer, lesson
+        3. Settings from class obj
+        4. Custom logging for specific ENV
+        5. Basic front plan display
+        6. Admin
 """
 
 
